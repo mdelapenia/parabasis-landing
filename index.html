@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07192b">
+<meta name="description" content="Parábasis es un sistema ERP de gestión contable y financiera. Integra contabilidad, tesorería, bancos, inversiones, activos fijos e impuestos, documentos, inteligencia artificial y conexión móvil.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Parábasis">
+<meta name="keywords" content="sistema contable, software contable, ERP de gestión, gestión financiera, tesorería, conciliación bancaria, órdenes de pago, inversiones, activos fijos, impuestos, contabilidad integrada, inteligencia artificial para empresas">
+<meta property="og:type" content="website"><meta property="og:locale" content="es_AR"><meta property="og:site_name" content="Parábasis">
+<meta property="og:title" content="Parábasis | Gestión integral, contabilidad conectada">
+<meta property="og:description" content="Cada operación tiene su documento y su reflejo contable. Gestión modular con asistente de IA y conexión móvil.">
+<meta name="twitter:card" content="summary">
+<title>Parábasis | Sistema ERP de gestión contable y financiera</title>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Parábasis","applicationCategory":"BusinessApplication","operatingSystem":"Web","inLanguage":"es-AR","description":"Sistema ERP modular que conecta operaciones, documentos y contabilidad, con inteligencia artificial y conexión móvil."}</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='100 90 320 330'%3E%3Cpolygon points='242,100 360,165 360,330 242,402 110,328 110,175' fill='%232a9fc0'/%3E%3Crect x='357' y='170' width='44' height='242' fill='%236fcf97'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#07192b;--ink2:#0d2840;--teal:#1fb3c4;--green:#6fcf97;--blue:#2b6cb8;--paper:#f4f8f9;--line:#dbe6ea;--mut:#5b7083;--cut:#07192b;--f1:"Roboto",Arial,sans-serif;--f2:"Roboto",Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;font:16px/1.65 var(--f2);color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.wrap{width:min(1180px,92%);margin:auto}
+h1,h2,h3{font-family:var(--f1);margin:0;letter-spacing:-.02em}
+svg.i{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 24px;border-radius:12px;border:1px solid transparent;font-weight:600;font-size:15px;transition:transform .2s,box-shadow .2s,background .2s}
+.btn.main{background:linear-gradient(120deg,var(--teal),var(--green));color:var(--ink)}
+.btn.main:hover{transform:translateY(-2px);box-shadow:0 10px 30px #1fb3c455}
+.btn.ghost{border-color:#ffffff40;color:#fff}.btn.ghost:hover{background:#ffffff14}
+.btn.dark{background:var(--ink);color:#fff}.btn.dark:hover{background:var(--ink2)}
+/* header */
+header{position:sticky;top:0;z-index:30;background:#07192bee;backdrop-filter:blur(14px);border-bottom:1px solid #ffffff14;color:#fff}
+.head{display:flex;align-items:center;justify-content:space-between;min-height:72px;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;font-family:var(--f1);font-weight:800;font-size:20px;letter-spacing:0}
+.brand svg{width:38px;height:38px}
+.nav{display:flex;align-items:center;gap:30px;font-size:14px;font-weight:500;color:#b9cddb}
+.nav a:not(.btn):hover{color:#fff}.nav .btn{min-height:42px;padding:0 18px;font-size:14px}
+.burger{display:none;background:none;border:0;color:#fff;font-size:26px}
+/* hero */
+.hero{position:relative;overflow:hidden;color:#fff;background:radial-gradient(900px 500px at 85% 20%,#1fb3c426,transparent 60%),radial-gradient(700px 500px at 0 100%,#2b6cb833,transparent 60%),var(--ink);padding:88px 0 110px}
+.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px);background-size:56px 56px;mask-image:linear-gradient(#000,transparent 85%);-webkit-mask-image:linear-gradient(#000,transparent 85%)}
+.hgrid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+h1{font-size:clamp(40px,5.4vw,70px);line-height:1.04;font-weight:800}
+h1 span{display:block;color:#7f9db3}
+.lead{max-width:520px;margin:26px 0 34px;font-size:18px;color:#b9cddb}
+.acts{display:flex;flex-wrap:wrap;gap:12px}
+.trust{display:flex;flex-wrap:wrap;gap:8px 24px;margin:34px 0 0;padding:0;list-style:none;font-size:14px;color:#8fa9bc}
+.trust li:before{content:"";display:inline-block;width:8px;height:8px;margin-right:9px;border-radius:2px;background:var(--green)}
+/* esquema de operación */
+.workflow-visual{padding:24px;border:1px solid #ffffff20;border-radius:22px;background:linear-gradient(160deg,#102e47,#091d31);box-shadow:0 40px 90px #0008;color:#fff}
+.wv-top{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;padding-bottom:20px;border-bottom:1px solid #ffffff18}.wv-top>div{display:grid;gap:7px}.wv-top strong{max-width:330px;font-size:19px;line-height:1.3}
+.wv-kicker{font-size:10px;letter-spacing:.13em;font-weight:700;color:#6fcf97}.wv-live{display:inline-flex;align-items:center;gap:6px;padding:6px 9px;border:1px solid #ffffff1a;border-radius:99px;color:#c1d5e1;font-size:10px;white-space:nowrap}.wv-live i{width:6px;height:6px;border-radius:50%;background:#6fcf97}
+.wv-sources{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}.wv-source{display:flex;align-items:center;gap:10px;padding:12px;border:1px solid #ffffff18;border-radius:12px;background:#ffffff08}.wv-icon{display:grid;place-items:center;flex:0 0 34px;height:34px;border-radius:10px;background:#1fb3c420;color:#6fcf97;font-size:19px}
+.wv-source b,.wv-results b,.wv-ai b{display:block;font-size:12px}.wv-source small,.wv-results small,.wv-ai small{display:block;margin-top:3px;color:#9fb6c7;font-size:10px;line-height:1.4}
+.wv-connector{display:flex;align-items:center;gap:10px;margin:18px 0;color:#a8c1d0;text-align:center;font-size:10px}.wv-connector span{height:1px;flex:1;background:linear-gradient(90deg,transparent,#2fa9b9)}.wv-connector span:last-child{transform:rotate(180deg)}
+.wv-core{display:flex;align-items:center;gap:12px;padding:15px;border:1px solid #1fb3c466;border-radius:13px;background:linear-gradient(110deg,#1fb3c41c,#6fcf9715)}.wv-core-icon{display:grid;place-items:center;width:40px;height:40px;border-radius:11px;background:#1fb3c425;color:#6fcf97;font-size:22px}.wv-core>div{flex:1}.wv-core b{display:block;font-size:14px}.wv-core small{display:block;margin-top:4px;color:#b3c8d5;font-size:11px;line-height:1.4}.wv-check{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#6fcf9725;color:#6fcf97}
+.wv-results{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}.wv-results span{padding:11px 8px;border-radius:10px;background:#ffffff08;text-align:center}.wv-ai{display:flex;align-items:center;gap:10px;margin-top:14px;padding:12px;border-radius:12px;background:#ffffff0d}.wv-ai-star{color:#6fcf97;font-size:23px}.wv-ai>span:nth-child(2){flex:1}.wv-ai-pill{padding:4px 8px;border:1px solid #6fcf9755;border-radius:6px;color:#6fcf97;font-size:10px;font-weight:700}
+.doc-section{background:#fff}.doc-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.doc-panel{padding:30px;border:1px solid var(--line);border-radius:18px;background:var(--paper)}.doc-panel h3{font-size:23px;margin-bottom:10px}.doc-panel p{margin:0;color:var(--mut);font-size:15px}.doc-examples{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}.doc-examples span{padding:7px 11px;border:1px solid var(--line);border-radius:9px;background:#fff;color:#2f4a60;font-size:13px}
+.ai-panel{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start;margin-top:18px;padding:30px;border-radius:18px;background:var(--ink);color:#fff}.ai-mark{display:grid;place-items:center;width:54px;height:54px;border-radius:15px;background:#6fcf971b;color:#6fcf97;font-size:29px}.ai-panel h3{font-size:24px;margin-bottom:8px}.ai-panel p{margin:0;color:#b9cddb;font-size:15px}.ai-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.ai-tags span{padding:6px 10px;border:1px solid #ffffff20;border-radius:99px;color:#d2e2eb;font-size:12px}
+.bridge-section{background:var(--paper)}.bridge-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:center}.bridge-flow{padding:24px;border-radius:20px;background:var(--ink);color:#fff;box-shadow:0 20px 55px #07192b20}.bridge-step{display:flex;align-items:flex-start;gap:14px;padding:15px 0;border-bottom:1px solid #ffffff18}.bridge-step:last-child{border-bottom:0}.bridge-num{display:grid;place-items:center;flex:0 0 34px;height:34px;border-radius:10px;background:#1fb3c425;color:#6fcf97;font-weight:700}.bridge-step b{display:block;font-size:15px}.bridge-step p{margin:4px 0 0;color:#b9cddb;font-size:13px;line-height:1.5}.bridge-note{margin-top:16px;color:var(--mut);font-size:13px}
+@media(max-width:980px){.bridge-grid{grid-template-columns:1fr;gap:28px}}
+
+.ledger{position:relative;background:#fff;color:var(--ink);border-radius:18px;padding:22px 22px 18px;box-shadow:0 40px 90px #000a,0 0 0 1px #ffffff22;transform:rotate(1.2deg)}
+.lh{display:flex;justify-content:space-between;align-items:center;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.lh strong{font-family:var(--f1);font-size:17px}.lh small{color:var(--mut);font-size:12px}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:99px;background:#e4f7ec;color:#17794a;font-size:12px;font-weight:600}
+.chip:before{content:"";width:6px;height:6px;border-radius:50%;background:#22a06b}
+.tbl{width:100%;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums}
+.tbl th{padding:12px 0 8px;text-align:right;font-size:12px;font-weight:600;color:var(--mut)}.tbl th:first-child{text-align:left}
+.tbl td{padding:11px 0;text-align:right;border-bottom:1px dashed var(--line)}.tbl td:first-child{text-align:left}
+.tbl td small{display:block;color:var(--mut);font-size:12px}
+.tbl tr.ind td:first-child{padding-left:20px}
+.tbl tfoot td{border:0;padding-top:14px;font-weight:700;font-family:var(--f1)}
+.tbl tbody tr{animation:in .6s both}.tbl tbody tr:nth-child(1){animation-delay:.3s}.tbl tbody tr:nth-child(2){animation-delay:.7s}.tbl tbody tr:nth-child(3){animation-delay:1.1s}
+.tbl tfoot tr{animation:in .6s 1.6s both}
+@keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.lf{display:flex;align-items:center;gap:10px;margin-top:6px;padding:11px 14px;border-radius:10px;background:var(--paper);font-size:13px;color:#2f4a60;animation:in .6s 2s both}
+.lf b{color:#17794a}
+.float{position:absolute;left:-34px;bottom:-26px;display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:14px;background:var(--ink2);border:1px solid #ffffff22;box-shadow:0 20px 50px #0008;transform:rotate(-1.5deg);animation:in .6s 2.3s both}
+.float svg{color:var(--green)}.float b{display:block;font-size:13px}.float small{color:#8fa9bc;font-size:12px}
+/* sections */
+section{padding:104px 0}
+.head2{max-width:680px;margin-bottom:52px}
+.head2 h2{font-size:clamp(32px,4vw,50px);line-height:1.1;font-weight:800}
+.head2 p{margin:18px 0 0;color:var(--mut);font-size:18px}
+.bento{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+.card{display:flex;flex-direction:column;gap:12px;padding:28px;border:1px solid var(--line);border-radius:18px;background:#fff;transition:border-color .2s,box-shadow .2s}
+.card:hover{border-color:#9fd8e0;box-shadow:0 16px 40px #07192b12}
+.ic{display:grid;place-items:center;width:48px;height:48px;border-radius:13px;background:linear-gradient(140deg,#e3f6f9,#e8f7ee);color:var(--blue)}
+.card h3{font-size:21px;font-weight:700}.card p{margin:0;color:var(--mut);font-size:15px}
+.c-big{grid-column:span 7;grid-row:span 2;background:var(--ink);border-color:var(--ink);color:#fff;padding:36px}
+.c-big .ic{background:#ffffff14;color:var(--green)}.c-big h3{font-size:30px}.c-big p{color:#a9c0d0}
+.c-big:hover{border-color:var(--teal);box-shadow:0 20px 60px #1fb3c433}
+.c-5{grid-column:span 5}.c-4{grid-column:span 4}
+.fn{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0 0;padding:0;list-style:none}
+.fn li{padding:14px 16px;border-radius:12px;background:#ffffff0d;border:1px solid #ffffff14;font-size:15px;font-weight:500}
+.fn li small{display:block;margin-top:2px;color:#8fa9bc;font-size:13px;font-weight:400}
+.fn li:first-child{grid-column:1/-1;background:linear-gradient(120deg,#1fb3c42a,#6fcf9722);border-color:#1fb3c455}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:6px}
+.tags span{padding:5px 12px;border-radius:99px;background:var(--paper);border:1px solid var(--line);font-size:13px;font-weight:500;color:#2f4a60}
+/* flow */
+.flow{background:var(--paper)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:0;padding:0;list-style:none;counter-reset:s;position:relative}
+.steps:before{content:"";position:absolute;left:24px;right:24px;top:24px;height:2px;background:linear-gradient(90deg,var(--teal),var(--green))}
+.steps li{position:relative;padding:0 24px 0 0;counter-increment:s}
+.steps li:before{content:counter(s);position:relative;display:grid;place-items:center;width:48px;height:48px;margin-bottom:22px;border-radius:50%;background:var(--ink);color:#fff;font:700 18px var(--f1);box-shadow:0 0 0 6px var(--paper)}
+.steps h3{font-size:20px;margin-bottom:8px}.steps p{margin:0;color:var(--mut);font-size:15px}.steps em{display:block;margin-top:10px;font-style:normal;font-size:13px;font-weight:600;color:var(--blue)}
+/* platform */
+.pgrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:72px;align-items:start}
+.pgrid .head2{margin:0;position:sticky;top:110px}
+.bens{display:grid;grid-template-columns:1fr 1fr;gap:34px 30px}
+.ben{padding-left:20px;border-left:3px solid var(--teal)}
+.ben:nth-child(2n){border-color:var(--green)}.ben h3{font-size:20px;margin-bottom:8px}.ben p{margin:0;color:var(--mut);font-size:15px}
+/* cta */
+.cta{padding:0 0 104px}
+.ctab{position:relative;overflow:hidden;padding:76px 32px;border-radius:28px;text-align:center;color:#fff;background:radial-gradient(600px 300px at 90% 0,#1fb3c455,transparent 70%),radial-gradient(500px 300px at 0 100%,#6fcf9733,transparent 70%),var(--ink)}
+.ctab svg.big{position:absolute;right:-60px;bottom:-70px;width:340px;height:340px;opacity:.1}
+.ctab h2{position:relative;max-width:700px;margin:0 auto 16px;font-size:clamp(32px,4.4vw,54px);line-height:1.08;font-weight:800}
+.ctab p{position:relative;max-width:520px;margin:0 auto 32px;color:#b9cddb;font-size:17px}
+footer{padding:36px 0 30px;border-top:1px solid var(--line);font-size:14px;color:var(--mut)}
+.foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+footer .brand{color:var(--ink);font-size:18px}footer .brand svg{width:32px;height:32px;--cut:#fff}
+.foot button{background:none;border:0;padding:0;color:var(--blue);font-weight:600;font-size:14px}
+/* cookies */
+.ck{position:fixed;z-index:60;left:20px;bottom:20px;width:min(420px,calc(100vw - 40px));padding:22px;border-radius:16px;background:#fff;border:1px solid var(--line);box-shadow:0 20px 70px #07192b40}
+.ck[hidden]{display:none}.ck h2{font-size:18px;margin-bottom:6px}.ck p{margin:0 0 16px;font-size:14px;color:var(--mut)}
+.ck div{display:flex;gap:10px}.ck .btn{min-height:44px;flex:1;padding:0 12px;font-size:14px}
+.ck .btn.ghost{border-color:var(--line);color:var(--ink)}.ck .btn.ghost:hover{background:var(--paper)}
+@media(max-width:980px){.hgrid,.pgrid{grid-template-columns:1fr;gap:56px}.pgrid .head2{position:static}.c-big,.c-5{grid-column:span 12;grid-row:auto}.c-4{grid-column:span 6}.steps{grid-template-columns:1fr 1fr;gap:40px 0}.steps:before{display:none}.ledger{transform:none}}
+@media(max-width:720px){.workflow-visual{padding:17px}.wv-top{flex-direction:column}.wv-live{align-self:flex-start}.doc-grid{grid-template-columns:1fr}.ai-panel{grid-template-columns:1fr;gap:14px}.wv-source{padding:10px 8px}.wv-source small{font-size:9px}section{padding:72px 0}.hero{padding:56px 0 80px}.burger{display:block}.nav{position:absolute;top:100%;left:0;right:0;display:none;flex-direction:column;align-items:stretch;gap:0;padding:8px 4% 20px;background:var(--ink);border-bottom:1px solid #ffffff14}.nav.open{display:flex}.nav a:not(.btn){padding:14px 0;border-bottom:1px solid #ffffff12}.nav .btn{margin-top:14px}.acts .btn{width:100%}.c-4{grid-column:span 12}.fn{grid-template-columns:1fr}.steps,.bens{grid-template-columns:1fr}.float{left:8px;bottom:-34px}.ctab{padding:56px 22px}.ck{left:10px;bottom:10px;width:calc(100vw - 20px)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<linearGradient id="gh" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6fcf97"/><stop offset=".45" stop-color="#2fa9b9"/><stop offset="1" stop-color="#2b6cb8"/></linearGradient>
+<linearGradient id="gb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6fcf97"/><stop offset=".55" stop-color="#2fa9b9"/><stop offset="1" stop-color="#245a9c"/></linearGradient>
+<symbol id="logo" viewBox="100 90 320 330"><polygon points="242,100 360,166 360,332 242,402 110,328 110,175" fill="url(#gh)"/><g fill="url(#gb)" stroke="var(--cut)" stroke-width="9" stroke-linejoin="miter"><polygon points="250,300 272,284 294,300 294,412 250,412"/><polygon points="303,240 325,226 347,240 347,412 303,412"/><polygon points="357,180 379,166 401,180 401,412 357,412"/></g></symbol>
+<symbol id="i-dash"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></symbol>
+<symbol id="i-book"><path d="M4 4v16M9 4v16M14 6l4 14M3 20h18"/></symbol>
+<symbol id="i-vault"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="12" r="3.5"/><path d="M12 8.5V6M12 18v-2.5M8.5 12H6M18 12h-2.5"/></symbol>
+<symbol id="i-coins"><circle cx="9" cy="9" r="6"/><path d="M18.1 10.4A6 6 0 1 1 10.4 18M7 6h4M9 6v6"/></symbol>
+<symbol id="i-build"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M10 21v-4h4v4"/></symbol>
+<symbol id="i-bank"><path d="M3 21h18M5 18v-7M9.5 18v-7M14.5 18v-7M19 18v-7M12 3l9 5H3z"/></symbol>
+<symbol id="i-box"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9zM12 12l8-4.5M12 12v9M12 12L4 7.5"/></symbol>
+<symbol id="i-users"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6M16 4.8a3.5 3.5 0 0 1 0 6.4M18 14.4c2 .8 3.5 2.600 3.500 5.600"/></symbol>
+<symbol id="i-wrench"><path d="M14.700 6.300a4 4 0 0 0 5 5L21 12.600 12.600 21 9 17.400l8.400-8.400zM9 17.400 4 22l-2-2 4.600-5"/></symbol>
+<symbol id="i-check"><path d="M20 6 9 17l-5-5"/></symbol>
+</defs>
+</svg>
+
+<header>
+  <div class="wrap head">
+    <a class="brand" href="#inicio" aria-label="Parábasis, inicio"><svg><use href="#logo"/></svg>Parábasis</a>
+    <button class="burger" id="bg" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">☰</button>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#modulos">Módulos</a><a href="#documentos">Documentos</a><a href="#circuito">Cómo funciona</a><a href="#plataforma">Plataforma</a>
+      <a class="btn main" href="https://erp-pbs.vercel.app">Ingresar al sistema</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio" style="padding-bottom:110px">
+  <div class="wrap hgrid">
+    <div>
+      <h1>Toda tu gestión, conectada.<span>De la operación a la contabilidad.</span></h1>
+      <p class="lead">Parábasis integra contabilidad, finanzas, tesorería, bancos, inversiones, activos fijos e impuestos. Cada operación se organiza mediante su documento y se conecta con la contabilidad, según el circuito de gestión.</p>
+      <div class="acts"><a class="btn main" href="https://erp-pbs.vercel.app">Ingresar al sistema</a><a class="btn ghost" href="#modulos">Ver los módulos</a></div>
+      <ul class="trust"><li>Modular</li><li>Parametrizable</li><li>Usuarios y permisos</li></ul>
+    </div>
+    <div class="workflow-visual" aria-label="Esquema conceptual de operaciones y contabilidad integrada">
+      <div class="wv-top"><div><span class="wv-kicker">GESTIÓN CONECTADA</span><strong>Una operación. Un documento. Toda la información relacionada.</strong></div><span class="wv-live"><i></i> Circuito integrado</span></div>
+      <div class="wv-sources">
+        <div class="wv-source"><span class="wv-icon">↗</span><span><b>Factura</b><small>Compras y gastos</small></span></div>
+        <div class="wv-source"><span class="wv-icon">⇄</span><span><b>Orden de pago</b><small>Proveedores y tesorería</small></span></div>
+        <div class="wv-source"><span class="wv-icon">◈</span><span><b>Inversión</b><small>Operaciones financieras</small></span></div>
+        <div class="wv-source"><span class="wv-icon">＋</span><span><b>Asiento contable</b><small>Registro directo</small></span></div>
+      </div>
+      <div class="wv-connector"><span></span><small>Los documentos organizan y respaldan cada operación</small><span></span></div>
+      <div class="wv-core"><span class="wv-core-icon">▦</span><div><b>Contabilidad integrada</b><small>Los movimientos se reflejan según el circuito y la configuración de cada operación</small></div><span class="wv-check">✓</span></div>
+      <div class="wv-results"><span><b>Mayor</b><small>Movimientos y saldos</small></span><span><b>Bancos</b><small>Conciliación</small></span><span><b>Informes</b><small>Información conectada</small></span></div>
+      <div class="wv-ai"><span class="wv-ai-star">✳</span><span><b>Asistente ERP con IA</b><small>Ayuda para realizar tareas dentro del sistema</small></span><span class="wv-ai-pill">GEMINI</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="modulos">
+  <div class="wrap">
+    <div class="head2"><h2>Cada área de la gestión, en su lugar.</h2><p>Nueve módulos conectados entre sí. Activá los que necesita tu organización y sumá el resto cuando lo necesites.</p></div>
+    <div class="bento">
+      <article class="card c-big">
+        <span class="ic"><svg class="i"><use href="#i-book"/></svg></span>
+        <h3>Contabilidad</h3>
+        <p>La contabilidad se integra con los movimientos que nacen en los distintos módulos. Consultá asientos, mayor y saldos con información conectada.</p>
+        <ul class="fn">
+          <li>Asientos contables<small>Carga y control de partida doble</small></li>
+          <li>Asientos periódicos<small>Automatizá lo que se repite</small></li>
+          <li>Cotización de monedas<small>Operá en más de una moneda</small></li>
+          <li>Mayor contable<small>Movimientos por cuenta</small></li>
+          <li>Saldo de cuentas<small>Situación al instante</small></li>
+        </ul>
+      </article>
+      <article class="card c-5"><span class="ic"><svg class="i"><use href="#i-vault"/></svg></span><h3>Bancos</h3><p>Compará tus movimientos con los del banco y dejá todo conciliado.</p><div class="tags"><span>Conciliación bancaria</span></div></article>
+      <article class="card c-5"><span class="ic"><svg class="i"><use href="#i-coins"/></svg></span><h3>Tesorería</h3><p>Gestioná órdenes de pago y su documentación relacionada, con impacto contable integrado.</p><div class="tags"><span>Orden de pago</span></div></article>
+      <article class="card c-4"><span class="ic"><svg class="i"><use href="#i-dash"/></svg></span><h3>Tablero</h3><p>Los indicadores clave de tu gestión, reunidos en una sola pantalla.</p></article>
+      <article class="card c-4"><span class="ic"><svg class="i"><use href="#i-build"/></svg></span><h3>Activos</h3><p>Administrá los activos fijos y vinculá su gestión con la información contable.</p></article>
+      <article class="card c-4"><span class="ic"><svg class="i"><use href="#i-bank"/></svg></span><h3>Impuestos</h3><p>Organizá la información impositiva dentro del circuito general de gestión.</p></article>
+      <article class="card c-4"><span class="ic"><svg class="i"><use href="#i-box"/></svg></span><h3>Stock</h3><p>Gestioná existencias y mantené conectada la información con los demás procesos.</p></article>
+      <article class="card c-4"><span class="ic"><svg class="i"><use href="#i-users"/></svg></span><h3>Usuarios</h3><p>Definí quién accede a qué, según su responsabilidad.</p></article>
+      <article class="card c-4"><span class="ic"><svg class="i"><use href="#i-wrench"/></svg></span><h3>Herramientas</h3><p>Configuración y utilitarios para adaptar el sistema.</p></article>
+    </div>
+    <p style="margin:26px 0 0;font-size:14px;color:var(--mut)">Los módulos y funcionalidades disponibles dependen de la configuración y los permisos de cada organización.</p>
+  </div>
+</section>
+
+<section class="doc-section" id="documentos"><div class="wrap">
+<div class="head2"><h2>La gestión empieza en el documento.</h2><p>En Parábasis, cada operación de la organización se registra a través de una clase de documento. Esa estructura le da contexto, respaldo y trazabilidad a lo que sucede en cada módulo.</p></div>
+<div class="doc-grid">
+<article class="doc-panel"><h3>Un documento para cada operación</h3><p>Una factura importada, una orden de pago, una inversión o un asiento contable no son datos aislados: son operaciones documentadas dentro de un circuito de gestión.</p><div class="doc-examples"><span>Facturas</span><span>Órdenes de pago</span><span>Inversiones</span><span>Asientos contables</span><span>Movimientos bancarios</span></div></article>
+<article class="doc-panel"><h3>Información relacionada, sin duplicar el trabajo</h3><p>Cuando registrás una operación, Parábasis conecta sus efectos con la contabilidad y la información de gestión que corresponda. Así podés seguir el movimiento desde su documento de origen hasta sus registros e informes relacionados.</p><div class="doc-examples"><span>Origen identificable</span><span>Registro contable</span><span>Seguimiento</span></div></article></div>
+<div class="ai-panel"><div class="ai-mark" aria-hidden="true">✳</div><div><h3>Una IA integrada para ayudarte a trabajar</h3><p>El Asistente ERP de Parábasis incorpora Gemini y permite trabajar con documentos y acceder a acciones concretas dentro de la aplicación, como cargar facturas, conciliar extractos, registrar inversiones y generar asientos. Una ayuda integrada en el entorno de gestión.</p><div class="ai-tags"><span>Procesamiento inteligente</span><span>Carga de documentos</span><span>Acciones dentro del sistema</span></div></div></div>
+</div></section>
+<section class="bridge-section" id="bridge"><div class="wrap bridge-grid">
+<div class="head2"><h2>Del celular al circuito de gestión.</h2><p>Parábasis Bridge conecta dispositivos móviles con el ERP para detectar eventos relevantes en las notificaciones de aplicaciones compatibles y convertirlos en acciones pendientes dentro del sistema.</p><p style="margin:18px 0 0;color:var(--mut);font-size:15px">Por ejemplo, si una aplicación bancaria notifica un cobro, Bridge puede transmitir el evento a Parábasis para que quede pendiente de revisión y contabilización.</p></div>
+<div class="bridge-flow" aria-label="Flujo conceptual de Parábasis Bridge">
+<div class="bridge-step"><span class="bridge-num">1</span><div><b>Una aplicación informa un movimiento</b><p>Una notificación, como el aviso de un cobro, llega al celular.</p></div></div>
+<div class="bridge-step"><span class="bridge-num">2</span><div><b>Bridge identifica el evento</b><p>El dispositivo procesa y clasifica la notificación compatible.</p></div></div>
+<div class="bridge-step"><span class="bridge-num">3</span><div><b>El ERP recibe una acción pendiente</b><p>La información se transmite a Parábasis para su revisión y posterior contabilización.</p></div></div>
+</div></div><div class="wrap"><p class="bridge-note">La detección depende de las aplicaciones compatibles y de la información disponible en cada notificación. Los eventos quedan sujetos a revisión antes de su contabilización.</p></div></section>
+
+<section class="flow" id="circuito">
+  <div class="wrap">
+    <div class="head2"><h2>Un dato, todo el circuito.</h2><p>No todo empieza con un asiento manual. La operación puede nacer en distintos módulos: el documento registra el movimiento y, cuando corresponde según el proceso, su efecto se refleja en la contabilidad.</p></div>
+    <ol class="steps">
+      <li><h3>Registrás la operación</h3><p>Importás una factura, generás una orden de pago, ingresás una inversión o cargás un asiento.</p><em>El módulo que corresponda</em></li>
+      <li><h3>La documentás</h3><p>La operación queda organizada bajo su clase de documento, con sus datos y respaldo.</p><em>Documentos</em></li>
+      <li><h3>Se integra la contabilidad</h3><p>Los movimientos contables se generan o actualizan según el tipo de operación y su configuración.</p><em>Contabilidad</em></li>
+      <li><h3>Consultás la información</h3><p>Revisá mayores, saldos, bancos e indicadores para seguir la gestión.</p><em>Control e informes</em></li>
+    </ol>
+  </div>
+</section>
+
+<section id="plataforma">
+  <div class="wrap pgrid">
+    <div class="head2"><h2>Se adapta a tu organización, no al revés.</h2><p>Cada empresa trabaja distinto. Parábasis crece con la tuya y mantiene la información ordenada en un solo lugar.</p><a class="btn dark" href="https://erp-pbs.vercel.app" style="margin-top:28px">Conocer el sistema</a></div>
+    <div class="bens">
+      <div class="ben"><h3>Modular</h3><p>Usá solo los módulos que necesitás y sumá otros a medida que tu operación lo pida.</p></div>
+      <div class="ben"><h3>Parametrizable</h3><p>Configurá el sistema según tus procesos y tu plan de cuentas.</p></div>
+      <div class="ben"><h3>Usuarios y permisos</h3><p>Cada persona accede solo a las funciones que le corresponden.</p></div>
+      <div class="ben"><h3>Multimoneda</h3><p>Gestioná cotizaciones de monedas para operar con más de una divisa.</p></div>
+      <div class="ben"><h3>Información conectada</h3><p>Los documentos conectan las operaciones con sus efectos contables y la información de gestión.</p></div>
+      <div class="ben"><h3>Preparado para crecer</h3><p>Una base que acompaña a tu organización a medida que evoluciona.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contacto">
+  <div class="wrap"><div class="ctab">
+    <svg class="big" aria-hidden="true" style="--cut:transparent"><use href="#logo"/></svg>
+    <h2>Una gestión más integrada empieza acá.</h2>
+    <p>Ingresá a Parábasis y conectá operaciones, documentos y contabilidad en una plataforma modular.</p>
+    <a class="btn main" href="https://erp-pbs.vercel.app">Ingresar al sistema</a>
+  </div></div>
+</section>
+</main>
+
+<footer><div class="wrap foot">
+  <a class="brand" href="#inicio"><svg><use href="#logo"/></svg>Parábasis</a>
+  <span>© <span id="yr"></span> Parábasis · Sistema ERP de gestión contable y financiera</span>
+  <span><button id="ckOpen" type="button">Preferencias de cookies</button></span>
+</div></footer>
+
+<aside class="ck" id="ck" role="dialog" aria-labelledby="ckT" hidden>
+  <h2 id="ckT">Tu privacidad importa</h2>
+  <p>Esta página guarda tu preferencia en este navegador. Si en el futuro se incorporan cookies opcionales de analítica o marketing, solo deberían activarse con tu consentimiento. Las funciones esenciales no se desactivan.</p>
+  <div><button class="btn dark" id="ckYes" type="button">Aceptar</button><button class="btn ghost" id="ckNo" type="button">Rechazar opcionales</button></div>
+</aside>
+
+<script>
+(()=>{
+  const $=id=>document.getElementById(id),K="parabasis_cookie_preferences_v1",ck=$("ck");
+  $("yr").textContent=new Date().getFullYear();
+  const nav=$("nav"),bg=$("bg");
+  bg.addEventListener("click",()=>{const o=nav.classList.toggle("open");bg.setAttribute("aria-expanded",o);bg.textContent=o?"×":"☰"});
+  nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{nav.classList.remove("open");bg.setAttribute("aria-expanded","false");bg.textContent="☰"}));
+  const saved=()=>{try{return JSON.parse(localStorage.getItem(K)||"null")}catch(_){return null}};
+  const save=v=>{try{localStorage.setItem(K,JSON.stringify({version:1,essential:true,analytics:v,marketing:v,updatedAt:new Date().toISOString()}))}catch(_){}
+    ck.hidden=true;window.dispatchEvent(new CustomEvent("parabasis:cookie-preferences",{detail:{analytics:v,marketing:v}}))};
+  $("ckYes").onclick=()=>save(true);$("ckNo").onclick=()=>save(false);$("ckOpen").onclick=()=>{ck.hidden=false};
+  if(!saved())ck.hidden=false;
+})();
+</script>
+</body>
+</html>
