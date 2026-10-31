@@ -348,7 +348,49 @@ footer .brand{color:var(--ink);font-size:18px}footer .brand svg{width:32px;heigh
     grid-template-columns: 1fr;
   }
 }
-  
+
+/* Enlaces de privacidad */
+.demo-privacy a {
+    color: var(--blue);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.footer-links a,
+.footer-links button {
+    color: var(--blue);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-links button:hover {
+    color: var(--teal);
+    text-decoration: underline;
+}
+
+.ck p a {
+    color: var(--blue);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+@media (max-width: 720px) {
+    .footer-links {
+        width: 100%;
+        justify-content: center;
+    }
+}
 /* cookies */
 .ck{position:fixed;z-index:60;left:20px;bottom:20px;width:min(420px,calc(100vw - 40px));padding:22px;border-radius:16px;background:#fff;border:1px solid var(--line);box-shadow:0 20px 70px #07192b40}
 .ck[hidden]{display:none}.ck h2{font-size:18px;margin-bottom:6px}.ck p{margin:0 0 16px;font-size:14px;color:var(--mut)}
@@ -650,9 +692,12 @@ footer .brand{color:var(--ink);font-size:18px}footer .brand svg{width:32px;heigh
       </button>
 
       <p class="demo-privacy">
-        Usaremos tus datos únicamente para responder esta solicitud.
+          Usaremos tus datos únicamente para responder esta solicitud.
+          Podés consultar nuestra
+          <a href="/privacidad.html" target="_blank" rel="noopener">
+              Política de Privacidad
+          </a>.
       </p>
-
       <div
         class="demo-status"
         id="demoStatus"
@@ -679,15 +724,39 @@ footer .brand{color:var(--ink);font-size:18px}footer .brand svg{width:32px;heigh
 </section>
 </main>
 
-<footer><div class="wrap foot">
-  <a class="brand" href="#inicio"><svg><use href="#logo"/></svg>Parábasis</a>
-  <span>© <span id="yr"></span> Parábasis · Sistema ERP de gestión contable y financiera</span>
-  <span><button id="ckOpen" type="button">Preferencias de cookies</button></span>
-</div></footer>
+<footer>
+  <div class="wrap foot">
+
+    <a class="brand" href="#inicio">
+      <svg><use href="#logo"/></svg>
+      Parábasis
+    </a>
+
+    <span>
+      © <span id="yr"></span> Parábasis · Sistema ERP de gestión contable y financiera
+    </span>
+
+    <div class="footer-links">
+      <a href="/privacidad.html">Política de Privacidad</a>
+      <button id="ckOpen" type="button">Preferencias de cookies</button>
+    </div>
+
+  </div>
+</footer>
 
 <aside class="ck" id="ck" role="dialog" aria-labelledby="ckT" hidden>
   <h2 id="ckT">Tu privacidad importa</h2>
-  <p>Esta página guarda tu preferencia en este navegador. Si en el futuro se incorporan cookies opcionales de analítica o marketing, solo deberían activarse con tu consentimiento. Las funciones esenciales no se desactivan.</p>
+  <p>
+      Esta página guarda tu preferencia en este navegador.
+      Si en el futuro se incorporan cookies opcionales de analítica
+      o marketing, solo deberían activarse con tu consentimiento.
+      Las funciones esenciales no se desactivan.
+      Más información en nuestra
+      <a href="/privacidad.html" target="_blank" rel="noopener">
+        Política de Privacidad
+      </a>.
+    </p>
+      
   <div><button class="btn dark" id="ckYes" type="button">Aceptar</button><button class="btn ghost" id="ckNo" type="button">Rechazar opcionales</button></div>
 </aside>
 
