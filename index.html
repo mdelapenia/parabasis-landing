@@ -137,6 +137,218 @@ footer{padding:36px 0 30px;border-top:1px solid var(--line);font-size:14px;color
 .foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
 footer .brand{color:var(--ink);font-size:18px}footer .brand svg{width:32px;height:32px;--cut:#fff}
 .foot button{background:none;border:0;padding:0;color:var(--blue);font-weight:600;font-size:14px}
+
+/* Demo request form */
+.demo-section {
+  background: var(--paper);
+}
+
+.demo-layout {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 54px;
+  align-items: start;
+}
+
+.demo-copy {
+  position: sticky;
+  top: 112px;
+}
+
+.demo-copy h2 {
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.1;
+}
+
+.demo-copy p {
+  color: var(--mut);
+  font-size: 17px;
+}
+
+.demo-points {
+  display: grid;
+  gap: 12px;
+  margin-top: 26px;
+  color: #2f4a60;
+  font-size: 14px;
+}
+
+.demo-points span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.demo-points i {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #e4f7ec;
+  color: #17794a;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.demo-form {
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 18px 50px #07192b0b;
+}
+
+.demo-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.demo-field {
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+}
+
+.demo-field.full {
+  grid-column: 1 / -1;
+}
+
+.demo-field label,
+.demo-form legend {
+  font-size: 13px;
+  font-weight: 700;
+  color: #29445a;
+}
+
+.demo-field input,
+.demo-field textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  border: 1px solid #cbd9df;
+  border-radius: 10px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-size: 14px;
+}
+
+.demo-field textarea {
+  min-height: 112px;
+  resize: vertical;
+}
+
+.demo-field input:focus,
+.demo-field textarea:focus {
+  outline: 3px solid #1fb3c433;
+  border-color: var(--teal);
+}
+
+.demo-form fieldset {
+  grid-column: 1 / -1;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.demo-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.demo-options label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  color: #2f4a60;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.demo-options input {
+  accent-color: #168fa0;
+}
+
+.demo-submit {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.demo-submit:disabled {
+  opacity: .7;
+  cursor: wait;
+}
+
+.demo-privacy {
+  margin: 12px 0 0;
+  color: var(--mut);
+  font-size: 12px;
+  text-align: center;
+}
+
+.demo-status {
+  display: none;
+  margin-top: 16px;
+  padding: 13px 15px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.demo-status.show {
+  display: block;
+}
+
+.demo-status.ok {
+  background: #e7f7ed;
+  color: #176b43;
+}
+
+.demo-status.error {
+  background: #fff0ed;
+  color: #a33324;
+}
+
+.hp-field {
+  position: absolute !important;
+  left: -5000px !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+}
+
+@media (max-width: 980px) {
+  .demo-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .demo-copy {
+    position: static;
+  }
+}
+
+@media (max-width: 720px) {
+  .demo-form {
+    padding: 21px;
+  }
+
+  .demo-fields,
+  .demo-options {
+    grid-template-columns: 1fr;
+  }
+}
+  
 /* cookies */
 .ck{position:fixed;z-index:60;left:20px;bottom:20px;width:min(420px,calc(100vw - 40px));padding:22px;border-radius:16px;background:#fff;border:1px solid var(--line);box-shadow:0 20px 70px #07192b40}
 .ck[hidden]{display:none}.ck h2{font-size:18px;margin-bottom:6px}.ck p{margin:0 0 16px;font-size:14px;color:var(--mut)}
@@ -170,10 +382,14 @@ footer .brand{color:var(--ink);font-size:18px}footer .brand svg{width:32px;heigh
   <div class="wrap head">
     <a class="brand" href="#inicio" aria-label="Parábasis, inicio"><svg><use href="#logo"/></svg>Parábasis</a>
     <button class="burger" id="bg" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">☰</button>
-    <nav class="nav" id="nav" aria-label="Principal">
-      <a href="#modulos">Módulos</a><a href="#documentos">Documentos</a><a href="#circuito">Cómo funciona</a><a href="#plataforma">Plataforma</a>
-      <a class="btn main" href="https://erp-pbs.vercel.app">Ingresar al sistema</a>
-    </nav>
+     <nav class="nav" id="nav" aria-label="Principal">
+        <a href="#modulos">Módulos</a>
+        <a href="#documentos">Documentos</a>
+        <a href="#circuito">Cómo funciona</a>
+        <a href="#plataforma">Plataforma</a>
+        <a href="#demo">Solicitar una demo</a>
+        <a class="btn main" href="https://erp-pbs.vercel.app">Ingresar</a>
+      </nav>
   </div>
 </header>
 
@@ -183,7 +399,10 @@ footer .brand{color:var(--ink);font-size:18px}footer .brand svg{width:32px;heigh
     <div>
       <h1>Toda tu gestión, conectada.<span>De la operación a la contabilidad.</span></h1>
       <p class="lead">Parábasis integra contabilidad, finanzas, tesorería, bancos, inversiones, activos fijos e impuestos. Cada operación se organiza mediante su documento y se conecta con la contabilidad, según el circuito de gestión.</p>
-      <div class="acts"><a class="btn main" href="https://erp-pbs.vercel.app">Ingresar al sistema</a><a class="btn ghost" href="#modulos">Ver los módulos</a></div>
+       <div class="acts">
+        <a class="btn main" href="#demo">Solicitar una demo</a>
+        <a class="btn ghost" href="#modulos">Ver los módulos</a>
+      </div>
       <ul class="trust"><li>Modular</li><li>Parametrizable</li><li>Usuarios y permisos</li></ul>
     </div>
     <div class="workflow-visual" aria-label="Esquema conceptual de operaciones y contabilidad integrada">
@@ -272,12 +491,190 @@ footer .brand{color:var(--ink);font-size:18px}footer .brand svg{width:32px;heigh
   </div>
 </section>
 
+<section class="demo-section" id="demo">
+  <div class="wrap demo-layout">
+
+    <div class="demo-copy">
+      <span class="wv-kicker" style="color:var(--blue)">CONOCÉ PARÁBASIS</span>
+
+      <h2>Tu próxima gestión puede empezar con una demo.</h2>
+
+      <p>
+        Contanos un poco sobre tu organización y qué áreas te interesa conocer.
+        Nos pondremos en contacto para coordinar una demostración de Parábasis.
+      </p>
+
+      <div class="demo-points">
+        <span><i>✓</i> Una presentación enfocada en tus necesidades</span>
+        <span><i>✓</i> Recorrido por los módulos relevantes</span>
+        <span><i>✓</i> Espacio para resolver tus consultas</span>
+      </div>
+    </div>
+
+    <form
+      class="demo-form"
+      id="demoForm"
+      action="https://formspree.io/f/xrppapar"
+      method="POST"
+    >
+      <input
+        type="hidden"
+        name="_subject"
+        value="Nueva solicitud de demostración - Parábasis"
+      >
+
+      <div class="hp-field" aria-hidden="true">
+        <label for="demoWebsite">Dejá este campo vacío</label>
+        <input
+          id="demoWebsite"
+          type="text"
+          name="_gotcha"
+          tabindex="-1"
+          autocomplete="off"
+        >
+      </div>
+
+      <div class="demo-fields">
+
+        <div class="demo-field">
+          <label for="demoName">Nombre y apellido *</label>
+          <input
+            id="demoName"
+            name="nombre"
+            type="text"
+            autocomplete="name"
+            placeholder="Tu nombre"
+            required
+            maxlength="120"
+          >
+        </div>
+
+        <div class="demo-field">
+          <label for="demoCompany">Empresa *</label>
+          <input
+            id="demoCompany"
+            name="empresa"
+            type="text"
+            autocomplete="organization"
+            placeholder="Nombre de la organización"
+            required
+            maxlength="160"
+          >
+        </div>
+
+        <div class="demo-field">
+          <label for="demoEmail">Correo electrónico *</label>
+          <input
+            id="demoEmail"
+            name="email"
+            type="email"
+            autocomplete="email"
+            placeholder="nombre@empresa.com"
+            required
+            maxlength="160"
+          >
+        </div>
+
+        <div class="demo-field">
+          <label for="demoPhone">Teléfono</label>
+          <input
+            id="demoPhone"
+            name="telefono"
+            type="tel"
+            autocomplete="tel"
+            placeholder="+54 9 ..."
+            maxlength="40"
+          >
+        </div>
+
+        <fieldset>
+          <legend>¿Qué áreas te interesa conocer?</legend>
+
+          <div class="demo-options">
+            <label>
+              <input type="checkbox" name="areas[]" value="Contabilidad">
+              Contabilidad
+            </label>
+
+            <label>
+              <input type="checkbox" name="areas[]" value="Finanzas y Tesorería">
+              Finanzas y Tesorería
+            </label>
+
+            <label>
+              <input type="checkbox" name="areas[]" value="Bancos">
+              Bancos
+            </label>
+
+            <label>
+              <input type="checkbox" name="areas[]" value="Inversiones">
+              Inversiones
+            </label>
+
+            <label>
+              <input type="checkbox" name="areas[]" value="Activos fijos">
+              Activos fijos
+            </label>
+
+            <label>
+              <input type="checkbox" name="areas[]" value="Impuestos">
+              Impuestos
+            </label>
+
+            <label>
+              <input type="checkbox" name="areas[]" value="Stock">
+              Stock
+            </label>
+
+            <label>
+              <input type="checkbox" name="areas[]" value="Gestión integral">
+              Gestión integral
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="demo-field full">
+          <label for="demoMessage">Mensaje (opcional)</label>
+          <textarea
+            id="demoMessage"
+            name="mensaje"
+            placeholder="Contanos brevemente qué necesitás gestionar..."
+            maxlength="2000"
+          ></textarea>
+        </div>
+
+      </div>
+
+      <button class="btn main demo-submit" id="demoSubmit" type="submit">
+        Solicitar demostración
+      </button>
+
+      <p class="demo-privacy">
+        Usaremos tus datos únicamente para responder esta solicitud.
+      </p>
+
+      <div
+        class="demo-status"
+        id="demoStatus"
+        role="status"
+        aria-live="polite"
+      ></div>
+    </form>
+
+  </div>
+</section>
+
 <section class="cta" id="contacto">
   <div class="wrap"><div class="ctab">
     <svg class="big" aria-hidden="true" style="--cut:transparent"><use href="#logo"/></svg>
     <h2>Una gestión más integrada empieza acá.</h2>
-    <p>Ingresá a Parábasis y conectá operaciones, documentos y contabilidad en una plataforma modular.</p>
-    <a class="btn main" href="https://erp-pbs.vercel.app">Ingresar al sistema</a>
+    <p>
+      Conocé cómo Parábasis puede integrar las operaciones, los documentos
+      y la contabilidad de tu organización.
+    </p>
+    
+    <a class="btn main" href="#demo">Solicitar una demo</a>
+    <a class="btn ghost" href="https://erp-pbs.vercel.app">Ingresar al sistema</a>
   </div></div>
 </section>
 </main>
@@ -301,6 +698,71 @@ footer .brand{color:var(--ink);font-size:18px}footer .brand svg{width:32px;heigh
   const nav=$("nav"),bg=$("bg");
   bg.addEventListener("click",()=>{const o=nav.classList.toggle("open");bg.setAttribute("aria-expanded",o);bg.textContent=o?"×":"☰"});
   nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{nav.classList.remove("open");bg.setAttribute("aria-expanded","false");bg.textContent="☰"}));
+
+const demoForm = $("demoForm");
+
+if (demoForm) {
+  const demoSubmit = $("demoSubmit");
+  const demoStatus = $("demoStatus");
+
+  demoForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    if (!demoForm.reportValidity()) return;
+
+    demoSubmit.disabled = true;
+    demoSubmit.textContent = "Enviando...";
+
+    demoStatus.className = "demo-status";
+    demoStatus.textContent = "";
+
+    try {
+      const response = await fetch(demoForm.action, {
+        method: "POST",
+        body: new FormData(demoForm),
+        headers: {
+          Accept: "application/json"
+        }
+      });
+
+      if (response.ok) {
+        demoForm.reset();
+
+        demoStatus.className = "demo-status show ok";
+        demoStatus.textContent =
+          "¡Gracias por tu interés! Recibimos tu solicitud y nos pondremos en contacto.";
+
+      } else {
+        let detail =
+          "No pudimos enviar tu solicitud. Revisá los datos e intentá nuevamente.";
+
+        try {
+          const result = await response.json();
+
+          if (result.errors && result.errors.length) {
+            detail = result.errors
+              .map((error) => error.message)
+              .join(" ");
+          }
+        } catch (_) {}
+
+        demoStatus.className = "demo-status show error";
+        demoStatus.textContent = detail;
+      }
+
+    } catch (_) {
+      demoStatus.className = "demo-status show error";
+      demoStatus.textContent =
+        "No pudimos conectar con el servicio. Verificá tu conexión e intentá nuevamente.";
+
+    } finally {
+      demoSubmit.disabled = false;
+      demoSubmit.textContent = "Solicitar demostración";
+    }
+  });
+}
+
+  
   const saved=()=>{try{return JSON.parse(localStorage.getItem(K)||"null")}catch(_){return null}};
   const save=v=>{try{localStorage.setItem(K,JSON.stringify({version:1,essential:true,analytics:v,marketing:v,updatedAt:new Date().toISOString()}))}catch(_){}
     ck.hidden=true;window.dispatchEvent(new CustomEvent("parabasis:cookie-preferences",{detail:{analytics:v,marketing:v}}))};
